@@ -57,27 +57,26 @@ var templateOne = function templateOne() {
             'Remove All'
         ),
         React.createElement(
-            'ol',
+            'p',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Item one'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Item two'
-            )
+            'Instant Chat'
         ),
+        app.options.map(function (option) {
+            return React.createElement(
+                'p',
+                { key: option },
+                'Ghalib: ',
+                option
+            );
+        }),
         React.createElement(
             'form',
             { onSubmit: onFormSubmit },
-            React.createElement('input', { type: 'text', name: 'option' }),
+            React.createElement('input', { type: 'text', name: 'option', placeholder: 'Write ur words' }),
             React.createElement(
                 'button',
                 null,
-                'Add Option'
+                'Enter'
             )
         )
     );

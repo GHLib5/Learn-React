@@ -33,13 +33,15 @@ const templateOne = () => {
             <p>{app.options.length > 0 ? 'Here are ur options :' : 'No Options'}</p>
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
-            <ol>
-                <li>Item one</li>
-                <li>Item two</li>
-            </ol>
+            <p>Instant Chat</p>
+            {
+                app.options.map((option) => {
+                    return <p key={option}>Ghalib: {option}</p>
+                })
+            }
             <form onSubmit={onFormSubmit}>
-                <input type="text" name="option"/>
-                <button>Add Option</button>
+                <input type="text" name="option" placeholder="Write ur words"/>
+                <button>Enter</button>
             </form>
         </div>
     );

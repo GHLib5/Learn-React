@@ -32,7 +32,7 @@ const templateOne = () => {
             {app.subtitle && <p>{app.subtitle}</p>}
             <p>{app.options.length > 0 ? 'Here are ur options :' : 'No Options'}</p>
             <p>{app.options.length}</p>
-            <button onClick={onRemoveAll}>Remove All</button>
+            <button onClick={onRemoveAll}>Remove All 1</button>
             <ol>
                 <li>Item one</li>
                 <li>Item two</li>
@@ -104,6 +104,6 @@ const renderCounterApp = () => {
 };
 
 //ReactDOM.render(template,appRoot);
-//renderCounterApp();
-templateOne();
+renderCounterApp();
+//templateOne();
 

@@ -44,12 +44,13 @@ var templateOne = function templateOne() {
         React.createElement(
             'p',
             null,
-            app.options.length > 0 ? 'Here are ur options :' : 'No Options'
+            app.options.length > 0 ? 'Here are ur chats :' : 'No Chats'
         ),
         React.createElement(
             'p',
             null,
-            app.options.length
+            app.options.length,
+            ' chats'
         ),
         React.createElement(
             'button',

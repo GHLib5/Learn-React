@@ -30,8 +30,8 @@ const templateOne = () => {
         <div>
             <h1>{app.title}</h1>
             {app.subtitle && <p>{app.subtitle}</p>}
-            <p>{app.options.length > 0 ? 'Here are ur options :' : 'No Options'}</p>
-            <p>{app.options.length}</p>
+            <p>{app.options.length > 0 ? 'Here are ur chats :' : 'No Chats'}</p>
+            <p>{app.options.length} chats</p>
             <button onClick={onRemoveAll}>Remove All</button>
             <p>Instant Chat</p>
             {

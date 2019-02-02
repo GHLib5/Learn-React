@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "yarn": "^1.13.0"
+  },
+  "name": "My-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ghalib Nugroho",
+  "license": "MIT"
+}

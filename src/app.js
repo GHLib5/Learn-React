@@ -34,7 +34,7 @@ const templateOne = () => {
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
             <ol>
-                <li>Item one</li>
+                <li>Item one1</li>
                 <li>Item two</li>
             </ol>
             <form onSubmit={onFormSubmit}>

@@ -1,175 +1,45 @@
 'use strict';
 
-console.log("app.js is working");
-// JSX = JavaScript XML
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var app = {
-    title: 'My-App',
-    subtitle: 'Biarkan Code menjadi hobimu',
-    options: []
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var onFormSubmit = function onFormSubmit(e) {
-    e.preventDefault();
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    var option = e.target.elements.option.value;
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    if (option) {
-        app.options.push(option);
-        e.target.elements.option.value = '';
-        templateOne();
+var Header = function (_React$Component) {
+    _inherits(Header, _React$Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
     }
-    //console.log('form submitted!');
-};
 
-var onRemoveAll = function onRemoveAll() {
-    app.options = [];
-    templateOne();
-};
-
-var templateOne = function templateOne() {
-    var template = React.createElement(
-        'div',
-        null,
-        React.createElement(
-            'h1',
-            null,
-            app.title
-        ),
-        app.subtitle && React.createElement(
-            'p',
-            null,
-            app.subtitle
-        ),
-        React.createElement(
-            'p',
-            null,
-            app.options.length > 0 ? 'Here are ur chats :' : 'No Chats'
-        ),
-        React.createElement(
-            'p',
-            null,
-            app.options.length,
-            ' chats'
-        ),
-        React.createElement(
-            'button',
-            { onClick: onRemoveAll },
-            'Remove All'
-        ),
-        React.createElement(
-            'p',
-            null,
-            'Instant Chat'
-        ),
-        app.options.map(function (option) {
+    _createClass(Header, [{
+        key: 'render',
+        value: function render() {
             return React.createElement(
                 'p',
-                { key: option },
-                'Ghalib: ',
-                option
-            );
-        }),
-        React.createElement(
-            'form',
-            { onSubmit: onFormSubmit },
-            React.createElement('input', { type: 'text', name: 'option', placeholder: 'Write ur words' }),
-            React.createElement(
-                'button',
                 null,
-                'Enter'
-            )
-        )
-    );
-    ReactDOM.render(template, appRoot);
-};
+                'This is React Paragraph'
+            );
+        }
+    }]);
 
-var user = {
-    name: 'Ghalib',
-    age: 20,
-    location: 'Indonesia'
-};
+    return Header;
+}(React.Component);
 
-var userName = 'Ghalib';
-var userAge = 20;
-var userLocation = 'Indonesia';
-
-function getLocation(location) {
-    if (location) {
-        return location;
-    } else {
-        return 'Unknown';
-    }
-}
-
-var templateTwo = React.createElement(
+var jsx = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Name : ',
-        user.name ? user.name : 'Unknown'
+        'Tittle'
     ),
-    React.createElement(
-        'p',
-        null,
-        'Age : ',
-        user.age
-    ),
-    React.createElement(
-        'p',
-        null,
-        'Location : ',
-        getLocation(user.location)
-    )
+    React.createElement(Header, null)
 );
 
-var count = 0;
-var addOne = function addOne() {
-    count++;
-    renderCounterApp();
-};
-var minusOne = function minusOne() {
-    count--;
-    renderCounterApp();
-};
-var reset = function reset() {
-    count = 0;
-    renderCounterApp();
-};
-
-var appRoot = document.getElementById('app');
-
-var renderCounterApp = function renderCounterApp() {
-    var templateThree = React.createElement(
-        'div',
-        null,
-        React.createElement(
-            'h1',
-            null,
-            'Count: ',
-            count
-        ),
-        React.createElement(
-            'button',
-            { onClick: addOne },
-            '+1'
-        ),
-        React.createElement(
-            'button',
-            { onClick: minusOne },
-            '-1'
-        ),
-        React.createElement(
-            'button',
-            { onClick: reset },
-            'reset'
-        )
-    );
-    ReactDOM.render(templateThree, appRoot);
-};
-
-//ReactDOM.render(template,appRoot);
-//renderCounterApp();
-templateOne();
+ReactDOM.render(jsx, document.getElementById('app'));

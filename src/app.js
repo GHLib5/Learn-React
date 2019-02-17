@@ -1,3 +1,5 @@
+import Button from '@material-ui/core/Button';
+
 const obj = {
     name: 'Ghalib',
     getName(){
@@ -52,7 +54,7 @@ class Action extends React.Component{
 }
 
 class Options extends React.Component{
-     constructor(props){
+    constructor(props){
         super(props);
         this.handleRemoveAll = this.handleRemoveAll.bind(this);
     }
@@ -68,7 +70,7 @@ class Options extends React.Component{
                 <button onClick={this.handleRemoveAll}>Remove All</button>
                 <p>Options Component Here</p>
                 {
-                   this.props.options.map((option) => <Option key={option} optionText={option} />)
+                    this.props.options.map((option) => <Option key={option} optionText={option} />)
                 }
             </div>
         );

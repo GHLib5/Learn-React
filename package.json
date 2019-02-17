@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "yarn": "^1.13.0"
